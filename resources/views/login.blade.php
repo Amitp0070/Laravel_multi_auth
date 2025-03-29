@@ -27,7 +27,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <form action="{{ route('account.athenticate') }}" method="post">
+                                <form action="{{ route('account.authenticate') }}" method="post">
                                     @csrf
                                     <div class="row gy-3 overflow-hidden">
                                         <div class="col-12">

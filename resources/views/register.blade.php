@@ -50,8 +50,11 @@
                                         </div>
                                         <div class="col-12">
                                             <div class="form-floating mb-3">
-                                                <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" value="" placeholder="Confirm Password" >
+                                                <input type="password" class="form-control  @error('password_confirmation') is-invalid @enderror" name="password_confirmation" id="password_confirmation" value="" placeholder="Confirm Password" >
                                                 <label for="password" class="form-label">Confirm Password</label>
+                                                @error('password_confirmation')
+                                                <p class="invalid-feedback">{{ $message }}</p>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="col-12">

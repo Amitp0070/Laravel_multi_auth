@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Laravel 11 Multi Auth : User</title>
+    <title>Laravel 11 Multi Auth :: Admin</title>
     <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 </head>
 
@@ -12,7 +12,7 @@
     <nav class="navbar navbar-expand-md bg-white shadow-lg bsb-navbar bsb-navbar-hover bsb-navbar-caret">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <strong>Laravel 11 Multi Auth : User</strong>
+                <strong>Laravel 11 Multi Auth : Admin</strong>
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
@@ -28,10 +28,10 @@
                     <ul class="navbar-nav justify-content-end flex-grow-1">
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#!" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Hello, {{ Auth::user()->name }}</a>
+                            <a class="nav-link dropdown-toggle" href="#!" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Hello, {{ Auth::guard('admin')->user()->name }}</a>
                             <ul class="dropdown-menu border-0 shadow bsb-zoomIn" aria-labelledby="accountDropdown">
                                 <li>
-                                    <a class="dropdown-item" href="{{ route('account.logout') }}">Logout</a>
+                                    <a class="dropdown-item" href="{{ route('admin.logout') }}">Logout</a>
                                 </li>
                             </ul>
                         </li>
